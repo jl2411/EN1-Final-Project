@@ -1,4 +1,9 @@
-from machine import pin, PWM
-servo = PWM(Pin(38), freq=50)
+from machine import Pin, PWM
+import time
+servo = PWM(Pin(37), freq=50)
 while True:
-    servo.duty(360)
+    servo.duty(20)
+    time.sleep(0.5)
+    servo.duty(130)
+    time.sleep(0.5)
+
